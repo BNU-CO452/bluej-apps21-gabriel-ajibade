@@ -43,8 +43,12 @@ public class Module
      */
     public void print()
     {
-        System.out.println();
-        System.out.print(" " + code + ": " + "\t" + title);
+        //System.out.println();
+        if (title.length() <= 16)
+            System.out.print(code + ":\t" + title + "\t\t");
+        else
+            System.out.print(code + ":\t" + title + "\t");
+
     }
     
     /**

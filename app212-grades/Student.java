@@ -24,7 +24,7 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Gabriel Adetokunbo Ajibade", 22033340);
     }
     
     /**
@@ -49,7 +49,13 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+        for(ModuleMark mark : marks)
+        {
+            if (moduleCode == mark.getModule().getCode())
+            {
+                mark.setMark(value);
+            }
+        }
     }
     
     /**
@@ -58,7 +64,7 @@ public class Student
     public void enrol(Course course)
     {
         this.course = course;
-        awardTestMarks();
+        //awardTestMarks();
     }
     
     /**
@@ -67,7 +73,14 @@ public class Student
      */
     public void awardTestMarks()
     {
-        
+        int value = 75;
+        for(Module module : course.modules)
+        {
+            ModuleMark mark = new ModuleMark(module);
+            mark.setMark(value);
+            marks.add(mark);
+            value -= 10;
+        }
     }
     
     /**
@@ -104,7 +117,7 @@ public class Student
     
     private void printModules()
     {
-
+        course.printModules();
     }
     
     public void printTranscript()
@@ -122,6 +135,11 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
+        for(ModuleMark mark : marks)
+        {
+            mark.print();
+            System.out.println("\t" + course.convertToGrade(mark.getValue()));
+        }
        
         Grades finalGrade = course.calculateGrade(marks);
         

@@ -1,0 +1,31 @@
+Student student1 = new Student();
+student1.print();
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+Course course1 = new Course();
+student1.enrol(course1);
+student1.printCourse();
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+
+ Course G400: BSc Computing
+Module module1 = new Module("co452", "Programming Concepts");
+course1.addModule(module1);
+ModuleMark moduleMa1 = new ModuleMark(module1);
+moduleMa1.setMark(75);
+student1.addMark(moduleMa1);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+
+ Course G400: BSc Computing
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+co452:	Programming Concepts	15	75	A
+
+
+ Final Course Grade = F

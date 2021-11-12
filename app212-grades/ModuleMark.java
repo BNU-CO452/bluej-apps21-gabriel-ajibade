@@ -42,7 +42,8 @@ public class ModuleMark
     
     public void setMark(int mark)
     {
-        this.mark = mark;
+        if (mark >= 0 && mark <= 100)
+            this.mark = mark;
     }
     
     public Module getModule()
@@ -57,6 +58,6 @@ public class ModuleMark
     public void print()
     {
         module.print();
-        System.out.print("\t  " + getCredit() + "\t" + mark);
+        System.out.print(getCredit() + "\t" + mark);
     }
 }

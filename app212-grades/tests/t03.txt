@@ -1,0 +1,86 @@
+Student student1 = new Student();
+Course course1 = new Course();
+student1.enrol(course1);
+Module module1 = new Module("co451", "Programming");
+Module module2 = new Module("co452", "Database");
+Module module3 = new Module("co453", "Programming fundamentals");
+Module module4 = new Module("co454", "Web application");
+course1.addModule(module1);
+course1.addModule(module2);
+course1.addModule(module3);
+course1.addModule(module4);
+ModuleMark moduleMa1 = new ModuleMark(module1);
+ModuleMark moduleMa2 = new ModuleMark(module2);
+ModuleMark moduleMa3 = new ModuleMark(module3);
+ModuleMark moduleMa4 = new ModuleMark(module4);
+moduleMa1.setMark(21);
+moduleMa2.setMark(21);
+moduleMa3.setMark(12);
+moduleMa4.setMark(9);
+student1.addMark(moduleMa1);
+student1.addMark(moduleMa2);
+student1.addMark(moduleMa3);
+student1.addMark(moduleMa4);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+
+ Course G400: BSc Computing
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+co451:	Programming		0	21	F
+co452:	Database		0	21	F
+co453:	Programming fundamentals	0	12	F
+co454:	Web application		0	9	F
+
+
+ Final Course Grade = F
+student1.awardMark("co451", 142);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+
+ Course G400: BSc Computing
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+co451:	Programming		0	21	F
+co452:	Database		0	21	F
+co453:	Programming fundamentals	0	12	F
+co454:	Web application		0	9	F
+
+
+ Final Course Grade = F
+Module module5 = new Module("co455", "Web Development");
+course1.addModule(module5);
+student1.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22033340, Gabriel Adetokunbo Ajibade
+
+ Course G400: BSc Computing
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+co451:	Programming		0	21	F
+co452:	Database		0	21	F
+co453:	Programming fundamentals	0	12	F
+co454:	Web application		0	9	F
+
+
+ Final Course Grade = F
